@@ -1,0 +1,64 @@
+  .Pagebg{
+    background: rgb(238,231,231);
+    background: linear-gradient(-180deg, rgba(238,231,231,1) 0%, rgba(251,251,251,1) 35%, rgba(249,249,249,1) 100%, rgba(250,250,250,1) 100%);
+   }
+
+   .footerBg{
+      background: rgb(41,40,40);
+      background: linear-gradient(180deg, rgba(41,40,40,1) 0%, rgba(45,43,43,1) 35%, rgba(71,77,78,1) 100%, rgba(250,250,250,1) 100%);
+   }
+  
+   html,body { 
+      height: 100%; 
+  }
+
+  .global-container{
+      height:100%;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      background-repeat: no-repeat;
+      background: linear-gradient(to bottom, #b0ebe3, #ffffff);
+  }
+  .global-container2{
+      background: linear-gradient(to bottom, #b0ebe3, #ffffff);
+  }
+
+  form{
+      font-size: 14px;
+      margin-top: 20px;
+  }
+
+  .card-title{ font-weight:400; }
+
+  .login-form{ 
+      width:430px;
+      margin:20px;
+  }
+
+  .sign-up{
+      text-align:center;
+      padding:10px 0 0;
+  }
+
+  .alert{
+      margin-bottom:-30px;
+      font-size: 13px;
+      margin-top:20px;
+  }
+  .bg-header{
+      background-color: #0c8066;
+  }
+
+  .bg-green{
+      background-image: linear-gradient(to top, #02615c 0%, #1198a1 100%);
+  }
+  .success{
+    color:#049b55;
+  }
+  .error{
+    color:red;
+  }
+  .d-letter-spacing{
+    letter-spacing:1px;
+  }
