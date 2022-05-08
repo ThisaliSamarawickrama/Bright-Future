@@ -86,7 +86,7 @@ export default function AdTeacher() {
                       <option value="Sinhala">Sinhala</option>
                       <option value="English">English</option>
                       <option value="Tamil">Tamil</option>
-                      <option value="ICT">ICT</option>
+                      
                       <option value="History">History</option>
                     </select>
                 </div>
