@@ -52,7 +52,11 @@ const card_payment_student = new Schema({
         required: true,
     },
 
-
+    timeStamp:{
+        type: String,
+        required: true,
+    },
+    
     
 });
 const card_payment_studentSchema = mongoose.model('card_payment_student', card_payment_student);
