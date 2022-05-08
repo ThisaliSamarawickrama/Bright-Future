@@ -20,15 +20,22 @@ export default function Payment() {
   }
     
   const [AllPayment,setAllPayment] = useState([]);
+  const [searchStudentId,setStudentId] = useState([]);
+
   useEffect(() => {
             axios.get('http://localhost:5000/payment/allPayment')
             .then(res => setAllPayment(res.data))
             .catch(error => console.log(error));
-  });
+  },[]);
 
   function edit(_id,name,grade,month){
     reactLocalStorage.setObject("paymentForEdit", [_id,name,grade,month]);
     window.location.href = "/EditPaymentFirst";
+  }
+
+  function ViewPayment(_id,cardName, cardNumber, studentID, Holder, cvv, amount, expireDate, name, grade, month, timeStamp){
+    reactLocalStorage.setObject("ViewPayment", [_id,cardName, cardNumber, studentID, Holder, cvv, amount, expireDate, name, grade, month, timeStamp]);
+    window.location.href = "/ViewPayment";
   }
 
 
@@ -82,6 +89,20 @@ export default function Payment() {
     })
   }
 
+  function search(){
+    
+    axios.get('http://localhost:5000/payment/allPayment/'+searchStudentId)
+    .then(res => setAllPayment(res.data))
+    .catch(error => console.log(error));
+  }
+
+
+  function close(){
+    setStudentId("");
+    axios.get('http://localhost:5000/payment/allPayment')
+    .then(res => setAllPayment(res.data))
+    .catch(error => console.log(error));
+  }
   return (
     <div className="Pagebg">
        <NavBar/>
@@ -92,6 +113,13 @@ export default function Payment() {
     <div style={{marginBottom:'10%'}}>
     <MDBCard className='text-white container  p-4'>
          <h5 className="text-muted"><u>Payments Panel</u></h5>
+          <div class="input-group mb-3 mt-5">
+              <input type="text" class="form-control" placeholder="Select student id"  onChange={(e) =>{
+                            setStudentId(e.target.value);
+                         }}/>
+              <button class="btn btn-dark shadow-0" onClick={search} type="button" id="button-addon2">Search</button>
+              <button class="btn btn-dark shadow-0" onClick={close} type="button" id="button-addon2">Close</button>
+          </div>
          <div className='text-end'>
             <MDBBtn color='dark' href='./AdminDashboard' size='sm' outline className='shadow-0 me-1' >
                     Back
@@ -130,12 +158,20 @@ export default function Payment() {
                                         payment.month
                                        
                                         )}><MDBIcon fas icon="pen-fancy" /></button>&nbsp;&nbsp;   
-                      <button type="button" class="btn btn-outline-warning btn-sm d-letter-spacing shadow-0" onClick={()=>edit(
+                      <button type="button" class="btn btn-outline-warning btn-sm d-letter-spacing shadow-0" onClick={()=>ViewPayment(
                                         payment._id,
+                                        payment.cardName,
+                                        payment.cardNumber,
+                                        payment.studentID,
+                                        payment.Holder,
+                                        payment.cvv,
+                                        payment.amount,
+                                        payment.expireDate,
                                         payment.name,
                                         payment.grade,
-                                        payment.month
-                                       
+                                        payment.month,
+                                        payment.timeStamp
+                                     
                                         )}><MDBIcon fas icon="info" /></button>&nbsp;&nbsp;            
                     </td>
                   </tr>
