@@ -31,6 +31,14 @@ router.route("/allPayment").get((req,res) => {
         console.log(err);
     });
 });   
+router.route("/allPayment/:id").get((req,res) => {
+    
+    Payment_model.find({studentID : req.params.id}).then((result) => {
+        res.json(result);
+    }).catch((err) => {
+        console.log(err);
+    });
+});   
 
 router.route("/deletePayment/:ID").delete(async (req, res) => {
     var ID = req.params.ID; 

@@ -45,7 +45,7 @@ function NavBar() {
                         </MDBNavbarItem>
                         <MDBNavbarItem className='ms-4 me-4'>
                         <MDBNavbarLink   >
-                            <h6 className='text-black-50'><a  href='Login' className='text-black-50'>Login</a> / <a  href='/' className='text-black-50'>Registration</a> &nbsp;&nbsp;<MDBIcon fas icon="user-circle" /></h6>
+                            <h6 className='text-black-50'><a  href='Login' className='text-black-50'>Login</a> / <a  href='Register' className='text-black-50'>Registration</a> &nbsp;&nbsp;<MDBIcon fas icon="user-circle" /></h6>
                         </MDBNavbarLink>
                         </MDBNavbarItem>
                     </MDBNavbarNav>
