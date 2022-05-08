@@ -130,7 +130,11 @@ export default function Payment() {
                                         payment.month
                                        
                                         )}><MDBIcon fas icon="pen-fancy" /></button>&nbsp;&nbsp;   
-                  
+                      <button type="button" class="btn btn-outline-warning btn-sm d-letter-spacing shadow-0" onClick={()=>edit(
+                                        payment._id,
+                                        payment.name,
+                                        payment.grade,
+                                        payment.month
                                        
                                         )}><MDBIcon fas icon="info" /></button>&nbsp;&nbsp;            
                     </td>
