@@ -4,7 +4,17 @@ const timestamp = require('time-stamp');
 
 router.route('/addPayment').post((req,res) => {
     
-
+    const cardName = req.body.cardName;
+    const cardNumber = req.body.cardNumber;
+    const studentID = req.body.studentID;
+    const Holder = req.body.Holder;
+    const cvv = req.body.cvv;
+    const amount = req.body.amount;
+    const expireDate = req.body.expireDate;
+    const name = req.body.name;
+    const grade = req.body.grade;
+    const month = req.body.month;
+    const timeStamp = timestamp('YYYY/MM/DD:mm:ss')
 
     const payment_saving = new Payment_model({cardName, cardNumber,studentID, Holder, cvv, expireDate,amount,name,grade, month,timeStamp});
 
