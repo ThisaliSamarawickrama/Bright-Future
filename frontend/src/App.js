@@ -24,6 +24,7 @@ import TeacherDash from './components/teacher/teacherDashboard.js';
 import AddClass from './components/teacher/addClass.js';
 import EditClass from './components/teacher/editClass.js';
 import TeacherProfile from './components/registration/teacherProfile.js';
+import ViewPayment from './components/payment/viewPayment.js';
 
 
 
@@ -50,6 +51,7 @@ function App() {
         <Route path="/AddClass" element={<AddClass />} />
         <Route path="/EditClass" element={<EditClass />} />
         <Route path="/TeacherProfile" element={<TeacherProfile />} />
+        <Route path="/ViewPayment" element={<ViewPayment />} />
       </Routes>
     </BrowserRouter>
   );
