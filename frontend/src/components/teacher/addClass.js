@@ -96,7 +96,20 @@ export default function AdTeacher() {
                     <select class="form-select"  onChange={(e) =>{
                             setTeacherName(e.target.value);
                          }} >
-                        
+                        <option value="">Select Subject</option>
+                      <option value="Mrs.Samanthi Dissanayake">Mrs.Samanthi Dissanayake</option>
+                      <option value="Ms.Isuri Ekanayake">Ms.Isuri Ekanayake</option>
+                      <option value="Mrs.Dinusha Hannadige">Mrs.Dinusha Hannadige</option>
+                      <option value="Mr.Buddhika Uduwaraarachchi">Mr.Buddhika Uduwaraarachchi</option>
+                      <option value="Ms.Danuji Perera">Ms.Danuji Perera</option>
+                      <option value="Mr.Kasun Solaman">Mr.Kasun Solaman</option>
+                      <option value="Mrs.Lakdinu Nirmali">Mrs.Lakdinu Nirmali</option>
+                      <option value="Mr.Vishnu Varathan">Mr.Vishnu Varathan</option>
+                      <option value="Mr.Tharanga Ranasinghe">Mr.Tharanga Ranasinghe</option>
+                      <option value="Mrs.Srimathi Dassanayake">Mrs.Srimathi Dassanayake</option>
+                      <option value="Mr.Chandula Herath">Mr.Chandula Herath</option>
+                      <option value="Ms.Sjitha N.Malaviarachchi">Ms.Sjitha N.Malaviarachchi</option>
+                      <option value="Mr.Dilan Illesinghe">Mr.Dilan Illesinghe</option>
                     </select>
                 </div>  
                 
