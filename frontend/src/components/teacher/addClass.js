@@ -96,9 +96,7 @@ export default function AdTeacher() {
                     <select class="form-select"  onChange={(e) =>{
                             setTeacherName(e.target.value);
                          }} >
-                        {teachers.map((teacher,key) => (
-                        <option value={teacher.teacherId+" - "+teacher.teacherName}>{teacher.teacherName}</option>
-                        ))}
+                        
                     </select>
                 </div>  
                 
