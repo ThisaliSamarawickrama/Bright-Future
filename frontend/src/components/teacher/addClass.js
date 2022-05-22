@@ -152,7 +152,7 @@ export default function AdTeacher() {
                 </div>
                 <div class="mb-3">
                     <label  class="form-label">Class Duration </label>
-                     <NumberFormat format="##:##"  className="form-control" style={{border:'1px solid #D7D7D7'}} placeholder="Min : Seconds"  onChange={(e) =>{
+                     <NumberFormat format="##:##"  className="form-control" style={{border:'1px solid #D7D7D7'}} placeholder="Hours : Min"  onChange={(e) =>{
                                 setClassDuration(e.target.value);
                             }}/>
                 </div>  
