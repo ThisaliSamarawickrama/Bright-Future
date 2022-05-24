@@ -1,4 +1,3 @@
-
 import React, { useState , useEffect } from 'react';
 import { MDBBtn , MDBCol , MDBRow, MDBIcon} from 'mdb-react-ui-kit';
 import axios from 'axios';
@@ -43,11 +42,15 @@ function Login() {
 			});
       }else{
           	Swal.fire({  
-			title: "Error!",
-			text: "Login Not Success",
-			icon: 'error',
+			title: "Success!",
+			text: "Login Success",
+			icon: 'success',
 			confirmButtonText: "OK",
-			type: "success"})
+			type: "success"}).then(okay => {
+				if (okay) {
+					window.location.href = "/AdminDashboard";
+				}
+			});
        }
     }
 
